@@ -3,6 +3,7 @@ module SessionsHelper
   # Logs in the given user.
   def log_in(user)
     cookies.signed[:user_id] = user.id
+    ahoy.authenticate(user)
   end
 
   def log_out
@@ -19,4 +20,6 @@ module SessionsHelper
   def logged_in?
     !current_user.nil?
   end
+
+
 end
