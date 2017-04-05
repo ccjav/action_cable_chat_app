@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
 
   def index
   end
-
+  
   def create
     message = current_user.messages.build(message_params)
     if message.save

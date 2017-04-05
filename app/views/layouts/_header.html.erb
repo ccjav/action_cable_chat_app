@@ -1,8 +1,11 @@
-<header class="header">
-  <a href="/" class="header-logo"><%= render 'layouts/logo' %></a>
-  <ul class="header-nav">
+<header class="bg-black-90 fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
+  <nav class="f6 fw6 ttu tracked">
+    <a class="link dim white dib mr3" href="#" title="Home">Home</a>
+    <a class="link dim white dib mr3" href="#" title="About">About</a>
+    <a class="link dim white dib mr3" href="#" title="Store">Store</a>
+    
     <% if logged_in? %>
-    <li><%= link_to "Sign out", logout_path, method: :delete %>
+      <%= link_to "Sign out", logout_path, method: :delete, class: "link dim white dib" %>
     <% end %>
-  </ul>
+  </nav>
 </header>

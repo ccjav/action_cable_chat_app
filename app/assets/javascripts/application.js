@@ -16,3 +16,9 @@
 //= require turbolinks
 //= require_tree .
 
+$.ajax({
+    type: "POST",
+    url: "/visits",
+    data: {visit: true}, // pass any additional parameters if you need
+    
+});

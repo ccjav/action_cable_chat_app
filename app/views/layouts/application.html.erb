@@ -9,11 +9,12 @@
     <meta charset="utf-8">
   </head>
 
-  <body>
+  <body class="sans-serif black">
     <% flash.each do |message_type, message| %>
       <div class="alert alert-<%= message_type %> animatedDelay fadeOutUp"><%= message %></div>
     <% end %>
     <%= render 'layouts/header' %>
     <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
